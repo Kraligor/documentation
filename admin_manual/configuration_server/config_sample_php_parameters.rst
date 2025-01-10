@@ -1526,10 +1526,10 @@ connectivity_check_domains
 ::
 
 	'connectivity_check_domains' => [
-		'www.nextcloud.com',
-		'www.startpage.com',
-		'www.eff.org',
-		'www.edri.org'
+		'https://www.nextcloud.com',
+		'https://www.startpage.com',
+		'https://www.eff.org',
+		'https://www.edri.org'
 	],
 
 Which domains to request to determine the availability of an Internet
@@ -1544,10 +1544,10 @@ If a protocol is provided, only this one will be tested.
 
 Defaults to the following domains:
 
- - www.nextcloud.com
- - www.startpage.com
- - www.eff.org
- - www.edri.org
+ - https://www.nextcloud.com
+ - https://www.startpage.com
+ - https://www.eff.org
+ - https://www.edri.org
 
 check_for_working_wellknown_setup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2847,6 +2847,20 @@ when running "occ files:transfer-ownership".
 Defaults to false, so incoming shares are not transferred if not specifically requested
 by a command line argument.
 
+Federated Cloud Sharing
+-----------------------
+
+
+sharing.federation.allowSelfSignedCertificates
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+::
+
+	'sharing.federation.allowSelfSignedCertificates' => false,
+
+Allow self-signed certificates for federated shares
+
 Hashing
 -------
 
@@ -3865,7 +3879,7 @@ enable_non-accessible_features
 
 	'enable_non-accessible_features' => true,
 
-Enable features that are do respect accessibility standards yet.
+Enable features that don't respect accessibility standards yet.
 
 Defaults to ``true``
 
