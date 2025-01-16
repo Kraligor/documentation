@@ -2240,6 +2240,20 @@ Note: memory equivalent to this size will be used for metadata generation.
 
 Default: 256 megabytes.
 
+max_file_conversion_filesize
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+::
+
+	'max_file_conversion_filesize' => 100,
+
+Maximum file size for file conversion.
+
+If a file exceeds this size, the file will not be converted.
+
+Default: 100 MiB
+
 LDAP
 ----
 
@@ -3934,6 +3948,20 @@ A bigger count results in higher throughput, but will also consume more server w
 while the improvements diminish.
 
 Defaults to 5.
+
+files.trash.delete
+^^^^^^^^^^^^^^^^^^
+
+
+::
+
+	'files.trash.delete' => true,
+
+Allow users to manually delete files from their trashbin.
+
+Automated deletions are not affected and will continue to work in cases like low remaining quota for example.
+
+Defaults to true.
 
 .. ALL_OTHER_SECTIONS_END
 .. Generated content above. Don't change this.
